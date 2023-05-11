@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.leftSideBar {
+  width: 100%;
+  max-width: 340px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 23px 34px 20px;
+
+    .headerItem {
+      display: flex;
+      align-items: center;
+
+      .headText {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        color: $color-light-gray;
+        margin-right: 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// media breakpoints
+$breakpoints: (
+  'xs': 36em,
+  //576px
+  'sm': 47.9375em,
+  //767px
+  'md': 61.9375em,
+  //992px
+  'lg': 75em,
+  //1200px
+  'xl': 87.5em,
+  //1400px
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+} // ornek kullanim: @include breakpoint(sm) {}
+// cikti ==> media screen and (max-width:768px) {...}
+
+// width-height değerini kısaca yazmak için.
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+// ornek kullanim: @include size(25px, 20px)
+// cikti ==> width: 25px; height:20px;

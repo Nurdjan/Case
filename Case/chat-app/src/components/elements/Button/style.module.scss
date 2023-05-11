@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+
+.button {
+  width: 235px;
+  padding: 10px;
+  border-radius: 60px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: $color-white;
+
+  &.primary {
+    background-color: $color-button;
+  }
+}

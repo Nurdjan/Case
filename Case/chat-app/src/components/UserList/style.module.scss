@@ -1,0 +1,91 @@
+@import "../../styles/variables";
+
+.userListItem {
+  display: flex;
+  align-items: center;
+  padding: 27px 18px 25px;
+  border-bottom: 1px solid $color-border;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &.itemActive {
+    background-color: $color-bg-gray;
+  }
+
+  .userInfo {
+    width: calc(100% - 50px);
+    padding-left: 17px;
+  }
+
+  .userAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: $color-white;
+  }
+
+  .imageAvatar {
+    background-color: $color-white;
+  }
+
+  .userHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-dark-text;
+  }
+
+  .lastSeen {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-light-gray-2;
+  }
+
+  .lastMessage {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-light-gray;
+    margin-top: 13px;
+
+    &.unread {
+      color: $color-light-gray-2;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-weight: 700;
+    }
+  }
+
+  .status {
+    width: 52px;
+    height: 22px;
+    background: $color-online;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-white;
+  }
+}
+
+.userList {
+  height: calc(100% - 96px);
+  overflow-y: scroll;
+}
